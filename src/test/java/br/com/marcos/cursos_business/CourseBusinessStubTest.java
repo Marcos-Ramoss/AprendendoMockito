@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 
-public class CourseBusinessTest {
+public class CourseBusinessStubTest {
 
     @Test
     void testCoursesRelatedToSpring_When_UsingAstub(){
