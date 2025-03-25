@@ -4,9 +4,9 @@
     <artifactId>automated-tests-with-java-erudio</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <properties>
-        <java.version>19</java.version>
+        <java.version>21</java.version>
         <junit.version>5.9.2</junit.version>
-        <mockito.version>5.2.0</mockito.version>
+        <mockito.version>5.16.1</mockito.version>
         <hamcrest.version>2.2</hamcrest.version>
         <maven.compiler.target>19</maven.compiler.target>
         <maven.compiler.source>19</maven.compiler.source>
