@@ -30,4 +30,17 @@ public class CourseBusiness {
         }
         return filtrarCurso;
     }
+
+    public void deteteCurso(String estudante){
+
+        var todosCursos = service.recuperarCurso(estudante);
+
+        for (String curso : todosCursos) {
+            if (!curso.contains("Spring")) {
+                service.deleteCourse(curso);
+            }
+        }
+    }
+
+
 }

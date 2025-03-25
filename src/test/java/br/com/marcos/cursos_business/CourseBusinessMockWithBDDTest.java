@@ -2,6 +2,7 @@ package br.com.marcos.cursos_business;
 
 import br.com.marcos.service.CourseService;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -49,5 +50,31 @@ public class CourseBusinessMockWithBDDTest {
 
         assertThat(filtrarCurso.size(), is(4));
     }
+
+
+    @DisplayName(" Delete courses not related to Spring Using Mockito sould call Method")
+    @Test
+    void testDeleteCoursesNotRelatedToSpring_UsingMockitoVerify_shold_CallMethod_deleteCourse(){
+
+        given(mockService.recuperarCurso("Leandro"))
+                .willReturn(curso);
+
+        business.deteteCurso("Leandro");
+
+        verify(mockService, times(2))
+            .deleteCourse("Kotlin para DEV's Java: Aprenda a Linguagem Padrão do Android");
+
+        verify(mockService, atLeast(2))
+                .deleteCourse("Docker para Amazon AWS Implante Apps Java e .NET com Travis CI");
+
+        verify(mockService)
+                .deleteCourse("Agile Desmistificado com Scrum, XP, Kanban e Trello");
+
+        // never() garante que o metodo não sera chamado!
+        verify(mockService, never())
+                .deleteCourse("REST API's RESTFul do 0 à AWS com Spring Boot 3 Java e Docker");
+
+    }
+
 
 }
