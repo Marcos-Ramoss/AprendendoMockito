@@ -26,7 +26,6 @@ public class ListWithBDDMockTest {
 
         given(list.size()).willReturn(10);
         assertThat( list.size(), is(10));
-
     }
 
     @Test

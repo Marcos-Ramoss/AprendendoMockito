@@ -4,10 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
-
 import java.util.List;
-
 import static org.mockito.Mockito.*;
 
 
@@ -53,11 +50,9 @@ public class ListMockTest {
 
     @Test
     void testMocckingList_When_GetIsCalledWithArgumentMatcher_ShouldReturnMarcos() {
-        //GIVEN
+
         var list = mock(List.class);
         when(list.get(anyInt())).thenReturn("Marcos");
-
-        //When //Assert
         assertEquals("Marcos", list.get(anyInt()));
 
     }

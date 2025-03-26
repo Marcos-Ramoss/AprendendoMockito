@@ -25,7 +25,7 @@ public class CourseBusinessMockTest {
     @Test
     void testCoursesRelatedToSpring_When_UsingMock(){
 
-        var filtrarCurso = business.recuperarCurso("Leandro");
+        var filtrarCurso = business.recuperarCurso("Marcos");
 
         assertEquals(4, filtrarCurso.size());
 

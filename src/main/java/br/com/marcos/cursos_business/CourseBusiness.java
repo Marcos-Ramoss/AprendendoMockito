@@ -26,8 +26,8 @@ public class CourseBusiness {
             if (curso.contains("Spring")) {
                 filtrarCurso.add(curso);
             }
-
         }
+
         return filtrarCurso;
     }
 

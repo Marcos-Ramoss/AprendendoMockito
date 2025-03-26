@@ -16,7 +16,7 @@ public class CourseBusinessStubTest {
         CourseService stubService = new CourseServiceStub();
         CourseBusiness business = new CourseBusiness(stubService);
 
-        var filtrarCurso = business.recuperarCurso("Leandro");
+        var filtrarCurso = business.recuperarCurso("Marcos");
 
         assertEquals(4, filtrarCurso.size());
 
